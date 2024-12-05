@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import HomePage from './pokemons/page/HomePage'
-import PokemonListTypes from './pokemons/page/ListTypes'
+import PokemonsListType from './pokemons/page/PokemonsListType'
+import ListTypes from './pokemons/page/ListTypes'
+
 
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
     <BrowserRouter>
       <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/type-list" element={<PokemonListTypes />} />
+      <Route path="/type-list" element={<ListTypes />} />
+      <Route path="/pokemons-type-list/" element={<PokemonsListType />} />
       </Routes>
       </BrowserRouter>
     </>

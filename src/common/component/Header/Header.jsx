@@ -26,11 +26,11 @@ const Header = () => {
             </li>
 
             <li>
-              <Link to={"/type-list"}>Types</Link>
+              <Link to={"/list-type"}>Types</Link>
             </li>
 
             <li>
-              <Link to={"/pokemon-type-list"}>Pokemon Types</Link>
+              <Link to={"/pokemons-type-list/"}>Pokemon Types</Link>
             </li>
 
             <li>
