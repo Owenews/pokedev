@@ -12,6 +12,7 @@ const Header = () => {
 
     return (
       <header>
+          <h1>Pokedev</h1>
           <a href="http://localhost:5173"><img className="logo-pokeball" src="https://www.pokebuild.xyz/logo192.png" alt="Logo pokeball" /></a>
         
         <nav>
