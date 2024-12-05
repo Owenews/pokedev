@@ -18,7 +18,7 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to={"/"}>Accueil</Link>
+              <Link to={"/"}>Home</Link>
             </li>
 
             <li>
@@ -44,7 +44,7 @@ const Header = () => {
 
           <form method="get" onSubmit={handleSubmitSearch}>
             <label>
-               <input type="search" name="query" placeholder="Search for a meal" required />
+               <input type="search" name="query" placeholder="Search for a pokemon" required />
             </label>
 
             <input type="submit" value="🔍"/>
