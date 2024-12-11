@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Header from "../../../common/component/Header/Header";
 import Footer from "../../../common/component/Footer/Footer";
-import { Link } from "react-router-dom";
+import PokemonCard from "../../component/PokemonCard/PokemonCard";
 import useGetPokemonsType from "../../hook/useGetPokemonsType";
 import "./PokemonsType.scss";
 
@@ -38,21 +38,12 @@ const PokemonsType = () => {
       <Header />
       <section>
         <h2 className="pokemons-type">Tous les pokémons de type {type}</h2>
-        {pokemonsListType.length > 0 ? (
-          pokemonsListType.map((pokemon) => (
-            <article key={pokemon.id}>
-              <p>{pokemon.name}</p>
-              <img src={pokemon.image} alt={pokemon.name} />
-              <div className="card-buttons">
-                <Link to={`/pokemons-details/${pokemon.name}`}>
-                  <button className="card-button">Voir les détails</button>
-                </Link>
-              </div>
-            </article>
-          ))
-        ) : (
-          <p>Aucun pokémon trouvé pour ce type.</p>
-        )}
+        <div className="pokemons-list">
+          {/* Si la liste des pokémons est disponible, on map sur chaque élément et on utilise le composant PokemonCard */}
+          {pokemonsListType.map((pokemon) => (
+            <PokemonCard key={pokemon.id} pokemon={pokemon} /> // Utilisation du composant PokemonCard
+          ))}
+        </div>
       </section>
       <Footer />
     </>
