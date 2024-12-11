@@ -1,0 +1,100 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Styles globaux pour le footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3b4cca;
+    color: #ffffff;
+    border-top: 3px solid #f7d02c;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permet aux éléments de s'adapter en cas de petit écran */
+    width: 100%; /* S'assure que le footer occupe toute la largeur */
+    position: relative; /* Assure une position par rapport au contenu principal */
+  }
+  
+  /* Logo Pokéball */
+  .logo-pokeball {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Texte centré */
+  footer p {
+    margin: 5px 0;
+    text-align: center;
+    flex-grow: 1; /* Permet au texte de s'étendre pour centrer automatiquement */
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #f7d02c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    color: #ff0000;
+  }
+  
+  /* Bouton scroll up */
+  .scroll-up-section {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  #scrollUp {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f7d02c;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-btn img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-btn:hover img {
+    transform: translateY(-5px); /* Légère animation de déplacement lors du survol */
+  }
+  
+  #scrollUp:hover {
+    background-color: #ff0000;
+  }
+  
+  /* Adaptation pour les écrans plus petits */
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    footer p {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-pokeball {
+      width: 40px;
+      height: 40px;
+    }
+  
+    footer p {
+      font-size: 0.8rem;
+    }
+  }
+  
