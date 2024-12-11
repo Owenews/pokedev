@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import "./Hearder.scss"
 
 const Header = () => {
     const navigate = useNavigate();
@@ -30,18 +31,19 @@ const Header = () => {
             </li>
 
             <li>
-              <Link to={"/pokemons-type-list/"}>Pokemon Types</Link>
+              <Link to={"/pokemons-type-list"}>Pokemon Types</Link>
             </li>
 
             <li>
-              <Link to={"random-pokemon"}>Random Pokemon</Link>
+              <Link to={"/random-pokemon"}>Random Pokemon</Link>
             </li>
 
             <li>
-              <Link to={"pokemon-fight"}>Pokemon Fight</Link>
+              <Link to={"/pokemon-fight"}>Pokemons Fight</Link>
             </li>
           </ul>
-
+          <ul>
+            <li>
           <form method="get" onSubmit={handleSubmitSearch}>
             <label>
                <input type="search" name="query" placeholder="Search for a pokemon" required />
@@ -49,6 +51,8 @@ const Header = () => {
 
             <input type="submit" value="🔍"/>
           </form>
+          </li>
+          </ul>
         </nav>
       </header>
     );
