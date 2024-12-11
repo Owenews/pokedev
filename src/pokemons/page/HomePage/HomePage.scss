@@ -1,0 +1,74 @@
+/* Style général de la page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* Style pour le conteneur principal */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3b4cca;
+    font-family: 'Pokemon Solid', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Style pour les sections */
+  section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animation légère pour les sections */
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Contenu de l'équipe Pokémon */
+  .pokemons-team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Section des types aléatoires */
+  .pokemon-random-types-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  
+    section {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  
+    section {
+      padding: 10px;
+    }
+  }
+  
