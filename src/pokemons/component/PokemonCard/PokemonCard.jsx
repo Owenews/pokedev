@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import "./PokemonCard.scss"; // Assurez-vous d'avoir un fichier de style pour ce composant
 
-// eslint-disable-next-line react/prop-types
+ 
 const PokemonCard = ({ pokemon }) => {
   return (
     <div key={pokemon.id} className="pokemon-card">
