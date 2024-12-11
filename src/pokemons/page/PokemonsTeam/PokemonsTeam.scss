@@ -1,0 +1,134 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Style général pour la section */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .pokemon-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Pokemon', sans-serif;
+  }
+  
+  .button-container {
+    margin-bottom: 20px;
+  }
+  
+  .pokemon-bouton {
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pokemon-bouton:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Conteneur des cartes de Pokémon */
+  .pokemons-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Carte de chaque Pokémon */
+  .pokemon-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pokemon-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Image du Pokémon avec un redimensionnement */
+  .pokemon-image {
+    width: 120px;  /* Réduit la taille des images */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Boutons pour voir plus d'options */
+  .card-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  
+  .card-button {
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    .pokemon-cards-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .pokemon-image {
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pokemon-cards-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .pokemon-image {
+      width: 80px;
+    }
+  
+    .pokemon-title {
+      font-size: 26px;
+    }
+  
+    .pokemon-bouton {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
