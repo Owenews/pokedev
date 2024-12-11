@@ -1,0 +1,131 @@
+/* Style général pour la section */
+.pokemons-type-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 100vh; /* Remplit toute la hauteur de l'écran */
+    background-color: #f8f8f8; /* Fond clair */
+}
+
+/* Titre principal */
+.pokemons-type {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3b4cca;
+    margin-bottom: 30px;
+    font-family: 'Pokemon', sans-serif;
+    text-align: center;
+}
+
+/* Conteneur des cartes de Pokémon */
+.pokemon-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille fluide */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center; /* Centre les cartes dans la grille */
+}
+
+/* Carte pour chaque Pokémon */
+.pokemon-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Nom du Pokémon */
+.pokemon-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Pokemon', sans-serif;
+}
+
+/* Image du Pokémon */
+.pokemon-card img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons d'action */
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-button {
+    background-color: #f7d02c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #ff9900;
+}
+
+/* Responsivité */
+@media (max-width: 1024px) {
+    .pokemon-card img {
+        width: 100px; /* Réduit l'image sur tablette */
+    }
+
+    .pokemon-card p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pokemon-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne sur tablette */
+    }
+
+    .pokemon-card img {
+        width: 80px;
+    }
+
+    .pokemon-card p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemon-cards-container {
+        grid-template-columns: 1fr; /* 1 carte par ligne sur très petit écran */
+    }
+
+    .pokemon-card img {
+        width: 70px;
+    }
+
+    .pokemon-card p {
+        font-size: 14px;
+    }
+
+    .card-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
