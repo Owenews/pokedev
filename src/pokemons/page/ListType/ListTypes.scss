@@ -1,0 +1,102 @@
+/* Style général pour la section */
+.types-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .types-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Pokemon', sans-serif;
+  }
+  
+  /* Conteneur des cartes de types Pokémon */
+  .types-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Carte pour chaque type de Pokémon */
+  .type-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .type-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Nom du type Pokémon */
+  .type-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Réduction de la taille des images */
+  .type-image {
+    width: 120px; /* Limite la taille des images */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Bouton pour obtenir plus d'infos */
+  .card-button {
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    .types-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne sur tablette */
+    }
+  
+    .type-image {
+      width: 100px; /* Réduit l'image sur tablette */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .types-container {
+      grid-template-columns: 1fr; /* 1 carte par ligne sur mobile */
+    }
+  
+    .type-image {
+      width: 80px; /* Réduit encore plus l'image sur mobile */
+    }
+  
+    .types-title {
+      font-size: 26px;
+    }
+  
+    .card-button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  
